@@ -19,8 +19,8 @@ And then for the most recent course project, I used Git and Github to manage our
 Git is originally developed by Linus Torvalds, the creator of the Linux kernel. Originally, the Linux kernel source code was distributed using email patches and archives. However, this approach was not scalable for a large project like the Linux kernel. Linus Torvalds decided to create a distributed version control system that could handle the demands of the Linux kernel development process. This system became Git.
 
 <figure>
-    <img src="image/Linus.jpg" alt="Linus Torvalds" style="width:100%">
-    <figcaption>Linus is an elegant and easy-going guy. He won't give the middle finger in public</figcaption>
+    <img src="image/Linus.jpg" alt="Linus Torvalds" style="width:80%">
+    <figcaption> Linus is an elegant and easy-going guy. <strong><em>He won't give the middle finger in public.</em></strong></figcaption>
 </figure>
 
 ## Configuring Git
