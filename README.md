@@ -1,4 +1,4 @@
-# Git/Github tutorial for personal and group develipment
+# Git/Github tutorial for personal and group development
 
 ## Table of Contents
 - [Introduction](#introduction)
