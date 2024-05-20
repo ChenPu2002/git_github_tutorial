@@ -16,8 +16,7 @@ One year later, I did another course project and still no one in my group knew h
 And then for the most recent course project, I used Git and Github to manage our code in the whole time. It was a great experience. I could track the changes, manage the code and collaborate with my group members easily. I realized that Git and Github are very useful tools for both personal and group development. So I decided to write this tutorial to help myself and others to learn Git and Github.
 
 ## History of Git
-Git is originally developed by Linus Torvalds, the creator of the Linux kernel. 
-Originally, the Linux kernel source code was distributed using email patches and archives. However, this approach was not scalable for a large project like the Linux kernel. Linus Torvalds decided to create a distributed version control system that could handle the demands of the Linux kernel development process. This system became Git.
+Git is originally developed by Linus Torvalds, the creator of the Linux kernel. Originally, the Linux kernel source code was distributed using email patches and archives. However, this approach was not scalable for a large project like the Linux kernel. Linus Torvalds decided to create a distributed version control system that could handle the demands of the Linux kernel development process. This system became Git.
 
 ![Linus](image/Linus.jpg "Linus Torvalds")
 
