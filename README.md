@@ -8,7 +8,11 @@
 - [Collaboration and Branching](#collaboration-and-branching)
 
 ## Introduction
-Why we need git? The first time I learnt Git was in a course, we were required to submit our course project with github. However, at that time, Git and Github were ...
+Why we need git? The first time I learnt Git was in a course, we were required to submit our course project with github. However, at that time, Git and Github were just tools for me to submit my project. I didn't know how to use it for personal development or group development.
+
+One year later, I did another course project and still no one in my group knew how to use Git. So we just shared our code through Wechat. It was a disaster. I had to merge all our code manually as I was the major develeper and it was very hard to track the changes. We realized that I need to learn Git and Github for personal and group development in the future. So I started to learn Git and Github by myself.
+
+And then there is another course project. This time, I was the major developer again. I used Git and Github to manage our code. It was a great experience. I could track the changes, manage the code and collaborate with my group members easily. I realized that Git and Github are very useful tools for personal and group development. So I decided to write this tutorial to help others to learn Git and Github for personal and group development.
 
 ## Configuring Git
 Before you start using Git, you need to configure it. Open your terminal and set your name and email address with the following commands:
