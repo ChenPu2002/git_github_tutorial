@@ -20,7 +20,7 @@ Git is originally developed by Linus Torvalds, the creator of the Linux kernel. 
 
 <figure>
     <img src="image/Linus.jpg" alt="Linus Torvalds" style="width:100%">
-    <figcaption>Linus is an elegant and easy-going (儒雅随和) guy</figcaption>
+    <figcaption>Linus is an elegant and easy-going guy. He won't give the middle finger in public</figcaption>
 </figure>
 
 ## Configuring Git
