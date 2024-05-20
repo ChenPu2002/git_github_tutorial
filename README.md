@@ -8,7 +8,7 @@
 - [Collaboration and Branching](#collaboration-and-branching)
 
 ## Introduction
-Git is a widely used version control system that allows multiple developers to collaborate on the same project. GitHub is a platform for hosting Git repositories that facilitates online collaboration among developers. This tutorial will guide you through the basics of using Git and GitHub, making it easier for you to manage your projects.
+Why we need git? The first time I learnt Git was in a course, we were required to submit our course project with github. However, at that time, Git and Github were ...
 
 ## Configuring Git
 Before you start using Git, you need to configure it. Open your terminal and set your name and email address with the following commands:
