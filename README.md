@@ -32,6 +32,10 @@ git config --global user.name "Your Name"
 ```bash
 git config --global user.email "youremail@example.com"
 ```
+Use the following line to test the connection and authentication with Github
+```bash
+ssh -T git@github.com
+```
 
 ## Basic Git Commands
 Here are some basic Git commands to get you started:
