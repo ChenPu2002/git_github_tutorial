@@ -28,6 +28,8 @@ Before you start using Git, you need to configure it. Open your terminal and set
 
 ```bash
 git config --global user.name "Your Name"
+```
+```bash
 git config --global user.email "youremail@example.com"
 ```
 
