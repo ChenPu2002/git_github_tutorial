@@ -62,7 +62,6 @@ git remote add origin <repository-URL>
 git push -u origin master
 ```
 …or create a new repository on the command line
-echo "# Pacman" >> README.md
 ```bash
 git init
 git add README.md
@@ -73,7 +72,7 @@ git push -u origin main
 ```
 …or push an existing repository from the command line
 ```bash
-git remote add origin git@github.com:ChenPu2002/Pacman.git
+git remote add origin git@github.com:name/project.git
 git branch -M main
 git push -u origin main
 ```
