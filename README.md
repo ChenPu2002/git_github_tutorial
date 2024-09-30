@@ -48,7 +48,7 @@ Here are some basic Git commands to get you started:
 
 These commands are essential for basic Git operations.
 
-## Using GitHub
+## Starting a new repository
 To use GitHub, create an account at [github.com](https://github.com). Once your account is set up, you can create new repositories, clone existing ones, and push your local repositories to GitHub.
 
 Here's how to push a local repository to GitHub:
@@ -60,6 +60,22 @@ Here's how to push a local repository to GitHub:
 ```bash
 git remote add origin <repository-URL>
 git push -u origin master
+```
+…or create a new repository on the command line
+echo "# Pacman" >> README.md
+```bash
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:ChenPu2002/Pacman.git
+git push -u origin main
+```
+…or push an existing repository from the command line
+```bash
+git remote add origin git@github.com:ChenPu2002/Pacman.git
+git branch -M main
+git push -u origin main
 ```
 
 ## Collaboration and Branching
