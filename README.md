@@ -5,6 +5,7 @@
 - [History of Git](#history-of-git)
 - [Configuring Git](#configuring-git)
 - [Basic Git Commands](#basic-git-commands)
+- [Connection and Authentication](#connection-and-authentication)
 - [Starting a new repository](#starting-a-new-repository)
 - [Collaboration and Branching](#collaboration-and-branching)
 
@@ -32,10 +33,6 @@ git config --global user.name "Your Name"
 ```bash
 git config --global user.email "youremail@example.com"
 ```
-Use the following line to test the connection and authentication with Github
-```bash
-ssh -T git@github.com
-```
 
 ## Basic Git Commands
 Here are some basic Git commands to get you started:
@@ -48,31 +45,45 @@ Here are some basic Git commands to get you started:
 
 These commands are essential for basic Git operations.
 
-## Starting a new repository
+## Connection and Authentication 
 To use GitHub, create an account at [github.com](https://github.com). Once your account is set up, you can create new repositories, clone existing ones, and push your local repositories to GitHub.
+On your local machine, you can connect Github with HTTPS by default (which is a remote to you). However, it would be hard to use as you need to input your password to check your identity. Thus, it would easier to connect Github by SSH. Your need to create a public and private key in .ssh folder in your machine and then copy it to Github.
 
-Here's how to push a local repository to GitHub:
-
-1. Create a new repository on GitHub.
-2. Copy the repository URL provided by GitHub.
-3. In your local repository, run:
-
+Use the following line to test the connection and authentication with Github (SSH),
 ```bash
-git remote add origin <repository-URL>
-git push -u origin master
+ssh -T git@github.com
 ```
-…or create a new repository on the command line
+
+
+## Starting a New Repository
+Create a new repository on the command line. To let git managing your folder, you need to ensure that .git is exsiting in the folder itself or its parent folder.
+To do that, you should use git init:
 ```bash
 git init
+```
+
+### White List Strategy:
+Then, you need to stage all the files you want to manage with git by git add:
+For example, if you want to add README.md to stage:
+```bash
 git add README.md
+```
+### Black List Strategy:
+or if you want to add all the files in the current folder, use
+```bash
+git add .
+```
+If you have any file you don't want to add to the git, use .gitignore file to maintain the black list. Thus, all the files in .gitignore will not be tracked by git.
+
+```bash
 git commit -m "first commit"
 git branch -M main
-git remote add origin git@github.com:ChenPu2002/Pacman.git
+git remote add origin git@github.com:<name>/<project>.git
 git push -u origin main
 ```
 …or push an existing repository from the command line
 ```bash
-git remote add origin git@github.com:name/project.git
+git remote add origin git@github.com:<name>/<project>.git
 git branch -M main
 git push -u origin main
 ```
