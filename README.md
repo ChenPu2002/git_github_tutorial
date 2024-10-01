@@ -5,7 +5,7 @@
 - [History of Git](#history-of-git)
 - [Configuring Git](#configuring-git)
 - [Basic Git Commands](#basic-git-commands)
-- [Using GitHub](#using-github)
+- [Starting a new repository](#starting-a-new-repository)
 - [Collaboration and Branching](#collaboration-and-branching)
 
 ## Introduction
