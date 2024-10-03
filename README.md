@@ -98,3 +98,11 @@ Collaborating on projects with Git involves managing branches:
 - `git merge <branch-name>`: Merges the specified branch into the current branch.
 
 Use branches to isolate development work without affecting other parts of the project.
+
+## Updating Local Branch from Remote (Github)
+
+```bash
+git pull # = git fetch + git merge
+```
+If there is any merge conflict between remote code and local code, error will appear and you have to solve the merge conflict manully.
+
