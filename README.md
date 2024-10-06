@@ -99,10 +99,36 @@ Collaborating on projects with Git involves managing branches:
 
 Use branches to isolate development work without affecting other parts of the project.
 
-## Updating Local Branch from Remote (Github)
+### Updating Local Branch from Remote (Github)
 
 ```bash
 git pull # = git fetch + git merge
+git fetch --all # Get all the branches from remote
 ```
 If there is any merge conflict between remote code and local code, error will appear and you have to solve the merge conflict manully.
+
+### Undoing a Local Commit
+
+When working with Git, you might find yourself needing to undo a local commit. There are several ways to approach this depending on your intentions: whether you want to keep the changes made in the commit in your working directory, or discard them completely.
+
+#### Option 1: Keep the Changes in Your Working Directory
+
+If you wish to keep the changes for further modification but undo the commit itself, you can use the following command:
+
+    git reset --soft HEAD^
+
+This command will undo the last commit but keep the changes in your staging area, allowing you to re-assess or modify them before committing again.
+
+#### Option 2: Discard the Changes Completely
+
+If you want to undo the commit and completely remove all changes from the commit both from the staging area and the working directory, use:
+
+    git reset --hard HEAD^
+
+This command resets your current branch to the previous commit, discarding all changes that were made in the last commit.
+
+### Notes
+
+- `HEAD^` (or `HEAD~1`) refers to the commit immediately before the current HEAD.
+- Be cautious with `git reset --hard` as it permanently removes all uncommitted changes. Always make sure that you do not need these changes before using this command.
 
