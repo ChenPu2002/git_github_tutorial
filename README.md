@@ -48,7 +48,9 @@ These commands are essential for basic Git operations.
 ## Connection and Authentication 
 To use GitHub, create an account at [github.com](https://github.com). Once your account is set up, you can create new repositories, clone existing ones, and push your local repositories to GitHub.
 On your local machine, you can connect Github with HTTPS by default (which is a remote to you). However, it would be hard to use as you need to input your password to check your identity. Thus, it would easier to connect Github by SSH. Your need to create a public and private key in .ssh folder in your machine and then copy it to Github.
-
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 Use the following line to test the connection and authentication with Github (SSH),
 ```bash
 ssh -T git@github.com
