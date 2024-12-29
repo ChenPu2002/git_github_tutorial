@@ -134,3 +134,125 @@ This command resets your current branch to the previous commit, discarding all c
 - `HEAD^` (or `HEAD~1`) refers to the commit immediately before the current HEAD.
 - Be cautious with `git reset --hard` as it permanently removes all uncommitted changes. Always make sure that you do not need these changes before using this command.
 
+
+### Merge, Rebase and Pull Request
+
+When you are working on a project with multiple collaborators, you will need to merge your changes with the main branch. There are two common ways to do this: merge and rebase.
+
+#### Merge
+
+
+Merging is a way to combine the changes from one branch into another. Here are the steps to perform a merge:
+
+1. **Switch to the branch you want to merge into**:
+    ```bash
+    git checkout main
+    ```
+
+2. **Merge the desired branch into the current branch**:
+    ```bash
+    git merge <branch-name>
+    ```
+
+3. **Resolve any merge conflicts**:
+    If there are conflicts, Git will prompt you to resolve them. Open the conflicting files and make the necessary changes. After resolving the conflicts, stage the changes:
+    ```bash
+    git add <conflicted-file>
+    ```
+
+4. **Complete the merge**:
+    After resolving conflicts and staging the changes, complete the merge with:
+    ```bash
+    git commit
+    ```
+
+5. **Push the merged changes to the remote repository**:
+    ```bash
+    git push origin main
+    ```
+
+Merging is useful for integrating changes from different branches and ensuring that the main branch has the latest updates from all collaborators.
+
+
+#### Rebase
+
+Rebasing is an alternative to merging that rewrites the commit history. It is useful for maintaining a clean and linear commit history. Here are the steps to perform a rebase:
+
+1. **Switch to the branch you want to rebase**:
+    ```bash
+    git checkout <branch-name>
+    ```
+
+2. **Rebase the branch onto the main branch**:
+    ```bash
+    git rebase main
+    ```
+
+3. **Resolve any rebase conflicts**:
+    If there are conflicts, Git will prompt you to resolve them. Open the conflicting files and make the necessary changes. After resolving the conflicts, stage the changes:
+    ```bash
+    git add <conflicted-file>
+    ```
+    Continue the rebase:
+    ```bash
+    git rebase --continue
+    ```
+    If you encounter any issues during the rebase, you can abort the rebase:
+    ```bash
+    git rebase --abort
+    ```
+4. **Push the rebased changes to the remote repository**:
+    ```bash
+    git push origin <branch-name> --force
+    ```
+    **Note
+    Be cautious when using `--force` with `git push`, as it can overwrite the commit history on the remote repository. Only use `--force` if you are sure that it will not cause issues for other collaborators.**
+
+Rebasing is useful for maintaining a clean commit history and integrating changes from different branches in a linear fashion.
+
+#### Pull Request
+
+When you want to merge changes from a feature branch into the main branch, you can create a pull request on GitHub. Here are the steps to create a pull request:
+
+1. **Push your changes to the remote repository**:
+    ```bash
+    git push origin <branch-name>
+    ```
+2. **Go to the GitHub repository**:
+    Open the GitHub repository in your browser.
+
+
+3. **Create a new pull request**:
+    Click on the "New pull request" button.
+
+
+4. **Select the branches**:
+    Choose the branch you want to merge changes from and into.
+
+
+5. **Review the changes**:
+    Review the changes made in the pull request and add a description if needed.
+
+### Cherry-Pick
+
+Cherry-picking is a Git feature that allows you to apply a specific commit from one branch to another. This can be useful when you want to apply a specific change without merging the entire branch. Here are the steps to cherry-pick a commit:
+
+1. **Identify the commit hash**:
+    Find the commit hash of the commit you want to cherry-pick. You can use `git log` to view the commit history.
+
+2. **Switch to the target branch**:
+    ```bash
+    git checkout <target-branch>
+    ```
+3. **Cherry-pick the commit**:
+    ```bash
+    git cherry-pick <commit-hash>
+    ```
+4. **Resolve any conflicts**:
+    If there are conflicts, resolve them as you would during a merge or rebase.
+
+5. **Complete the cherry-pick**:
+    After resolving conflicts, commit the changes to complete the cherry-pick.
+
+Cherry-picking is a powerful feature that allows you to apply specific changes from one branch to another. Use it carefully to avoid introducing conflicts or unwanted changes.
+
