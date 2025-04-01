@@ -129,6 +129,10 @@ If you want to undo the commit and completely remove all changes from the commit
 
 This command resets your current branch to the previous commit, discarding all changes that were made in the last commit.
 
+Then we need to push to origin/main by force
+
+    git push origin main --force
+
 ### Notes
 
 - `HEAD^` (or `HEAD~1`) refers to the commit immediately before the current HEAD.
